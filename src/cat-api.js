@@ -18,7 +18,7 @@ function fetchBreeds() {
     });
 }
 
-function fetchCatByBreed(breedId) {
+function fetchCatBreed(breedId) {
   return axios
     .get(`/images/search?breed_ids=${breedId}`)
     .then(response => {
@@ -31,4 +31,4 @@ function fetchCatByBreed(breedId) {
       Report.failure('Oops!', 'Something went wrong! Try reloading the page!');
     });
 }
-export { fetchBreeds, fetchCatByBreed };
+export { fetchBreeds, fetchCatBreed };
