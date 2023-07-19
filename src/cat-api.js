@@ -1,7 +1,7 @@
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import axios from 'axios';
 axios.defaults.headers.common['x-api-key'] =
-  'live_KoQ89w9lKVCo2tfdFRDcwAtaIdTkLKM4NV6Ka4RjnOfBIXPXQvSpkfMLVGjXm8pH';
+  'live_Dq44YXXBnPhjGJSYGzdEvz1lu0LsZVcgpHtUwh0Yvi0uDrpSRyf5nA810k9996tR';
 axios.defaults.baseURL = 'https://api.thecatapi.com/v1/';
 
 function fetchBreeds() {
@@ -14,7 +14,7 @@ function fetchBreeds() {
       return response.data;
     })
     .catch(() => {
-      Report.failure('Oops!', 'Something went wrong! Try reloading the page!');
+      Report.failure('Is there something wrong!');
     });
 }
 
@@ -28,7 +28,7 @@ function fetchCatByBreed(breedId) {
       return response.data[0];
     })
     .catch(() => {
-      Report.failure('Oops!', 'Something went wrong! Try reloading the page!');
+      Report.failure('Is there something wrong!');
     });
 }
 export { fetchBreeds, fetchCatByBreed };
