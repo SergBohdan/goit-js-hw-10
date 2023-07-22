@@ -28,6 +28,8 @@ export function fetchBreeds() {
             }
             return response.data[0];
          } )
+        
           .catch(() => {
             throw new Error('Oops! Something went wrong while fetching breeds.');
-         });        
+         });  
+        }      
